@@ -7,7 +7,9 @@ const Home = () => {
     <div>
       <h1>Home</h1>
       <button
-        onClick={() => import("../sum").then((module) => module.sum(3, 4))}
+        onClick={() =>
+          import("../sum").then((module) => setNum(module.sum(3, 4)))
+        }
       >
         Add 3,4
       </button>
