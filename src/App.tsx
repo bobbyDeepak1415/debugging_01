@@ -25,7 +25,7 @@ function NavWrapper() {
       <nav style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}>
         <Link to="/">Home</Link>
         <Link to="/store">Store</Link>
-        <Link to="/about">About</Link>
+        <Link to="/about">About</Link>.
       </nav>
 
       <Outlet />
