@@ -1,7 +1,9 @@
 import { Link, Outlet, Route, Routes } from "react-router-dom";
 import About from "./components/About";
-import Store from "./components/Store";
+// import Store from "./components/Store";
 import Home from "./components/Home";
+
+
 
 function App() {
   return (
