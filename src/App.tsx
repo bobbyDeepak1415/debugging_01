@@ -37,7 +37,7 @@ function NavWrapper() {
         <Link to="/about">About</Link>
       </nav>
 
-      <Outlet />
+      <Outlet />.
     </>
   );
 }
