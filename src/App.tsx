@@ -2,8 +2,15 @@ import { Link, Outlet, Route, Routes } from "react-router-dom";
 import About from "./components/About";
 // import Store from "./components/Store";
 import Home from "./components/Home";
+import React from "react";
 
-
+const Store = React.lazy(() =>
+  import("./components/Store").then((module) => {
+    return {
+      default: module.Store,
+    };
+  })
+);
 
 function App() {
   return (

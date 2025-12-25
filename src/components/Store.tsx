@@ -1,5 +1,5 @@
 
-const Store = () => {
+export const Store = () => {
   return (
     <div>
       <h1>Store</h1>
@@ -7,4 +7,4 @@ const Store = () => {
   )
 }
 
-export default Store
+
