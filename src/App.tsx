@@ -12,8 +12,6 @@ const Store = React.lazy(() =>
   })
 );
 
-debugger;
-
 function App() {
   return (
     <>
