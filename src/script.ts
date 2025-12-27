@@ -1,5 +1,5 @@
 function printName(firstName: string, lastName: string) {
-  console.log(`${firstame} ${lastName}`);
+  console.log(`${firstName} ${lastName}`);
   return `${firstName} ${lastName}`;
 }
 
@@ -16,10 +16,18 @@ setTimeout(() => {
   console.log("setTimeout");
 }, 1000);
 
-printName("Leo", "Kingman");
-
-printTimes(4, "Bobby");
-
 document.addEventListener("click", () => {
   console.log("clicked");
 });
+
+function main() {
+  printName("Leo", "Kingman");
+}
+
+function test() {
+  printTimes(4, "Bobby");
+}
+
+main();
+
+test();
