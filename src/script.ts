@@ -4,23 +4,21 @@ function printName(firstName: string, lastName: string) {
 }
 
 function printTimes(n: number, value: string) {
-  debugger;
+  //   debugger;
   for (let i = 0; i <= n; i++) {
     console.log(value);
   }
 }
 
-debugger;
+// debugger;
 
 setTimeout(() => {
   console.log("setTimeout");
 }, 1000);
 
-
+printName("Bobby", "Deepak");
 printTimes(4, "Bobby");
 
 document.addEventListener("click", () => {
-    console.log("clicked");
+  console.log("clicked");
 });
-
-
