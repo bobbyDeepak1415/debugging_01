@@ -12,3 +12,7 @@ function printTimes(n: number, value: string) {
 printName("Leo", "Kingman");
 
 printTimes(4, "Bobby");
+
+document.addEventListener("click", () => {
+  console.log("clicked");
+});
