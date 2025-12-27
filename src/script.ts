@@ -16,18 +16,11 @@ setTimeout(() => {
   console.log("setTimeout");
 }, 1000);
 
+
+printTimes(4, "Bobby");
+
 document.addEventListener("click", () => {
-  console.log("clicked");
+    console.log("clicked");
 });
 
-function main() {
-  printName("Leo", "Kingman");
-}
 
-function test() {
-  printTimes(4, "Bobby");
-}
-
-main();
-
-test();
