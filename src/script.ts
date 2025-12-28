@@ -1,8 +1,7 @@
+const chngBtn = document.querySelector("button");
+const textToChange = document.getElementById("myTexts");
 
-
-
-const chngBtn=document.querySelector("button")
-
-chngBtn.addEventListener("click",()=>{
-  
-})
+chngBtn.addEventListener("click", function () {
+  console.log('here')
+  textToChange.innerText = "doing well learning debugging";
+});
