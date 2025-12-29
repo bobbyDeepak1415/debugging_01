@@ -1,18 +1,17 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export const Store = () => {
-
-  const [isLoggedIn,setIsloggedIn]=useState(false)
+  const [isLoggedIn, setIsloggedIn] = useState(false);
+  // const [msg,setMsg]=useState("")
 
   return (
     <div>
       <h1>Store</h1>
-      <button onClick={handleLogin}>Login</button>
+
+      {isLoggedIn ? <button>Logout</button> : <button>Login</button>}
+
       <br></br>
       <br></br>
-      <p>{isLoggedIn}</p>
     </div>
-  )
-}
-
-
+  );
+};
