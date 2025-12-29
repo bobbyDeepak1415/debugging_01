@@ -12,6 +12,7 @@ export const Store = () => {
       </button>
       <br></br>
       <br></br>
+      <p>{isLoggedIn ? "user is logged in" : "user is logged out"}</p>
     </>
   );
 };
