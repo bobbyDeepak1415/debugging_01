@@ -1,9 +1,9 @@
 import { useState } from "react";
 // import { sum } from "../sum";
 
-const Home = (props:number) => {
+const Home = (props: number) => {
+  const item = props.item;
 
-  
   const [num, setNum] = useState(0);
 
   return (
@@ -19,7 +19,7 @@ const Home = (props:number) => {
       </button>
 
       <p>{num}</p>
-      <p>{props.item}</p>
+      <p>{item}</p>
     </div>
   );
 };

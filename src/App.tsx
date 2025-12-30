@@ -15,22 +15,21 @@ const Store = React.lazy(() =>
 console.log("from app");
 
 function App() {
-
-  const item:number=45
+  const item: number = 45;
 
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<NavWrapper />}>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home item={item} />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/store" element={<Store />}></Route>
         </Route>
-      </Routes> */}
-      <Home item={item}/>
+      </Routes>
     </>
   );
 }
+.
 
 export default App;
 
