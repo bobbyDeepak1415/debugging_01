@@ -5,6 +5,10 @@ const About = () => {
     setInterval(() => {
       console.log("memory leaks");
     }, 1500);
+
+    return () => {
+      // clearInterval(timer)
+    };
   });
 
   return (
@@ -15,3 +19,5 @@ const About = () => {
 };
 
 export default About;
+
+// hide logs during initial additional invocations
