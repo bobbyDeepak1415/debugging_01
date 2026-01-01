@@ -12,9 +12,9 @@ function Todo() {
     setItem("");
   };
 
-  const handleDelete=()=>{
-    
-  }
+  const handleDelete = (index: number) => {
+    setItems((i, _) => i !== index);
+  };
 
   return (
     <div>
@@ -25,14 +25,14 @@ function Todo() {
       <div>
         <ul>
           {items.map((item, index) => {
-            return <li key={index}>
+            return (
+              <li key={index}>
                 <div>
-
-                <span>{item}</span>
-                <button onClick={()=>handleDelete(index)}>Delete</button>
+                  <span>{item}</span>
+                  <button onClick={() => handleDelete(index)}>Delete</button>
                 </div>
-
-            </li>;
+              </li>
+            );
           })}
         </ul>
       </div>
