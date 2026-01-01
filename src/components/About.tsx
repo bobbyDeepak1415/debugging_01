@@ -8,6 +8,8 @@ const About = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  return <h1>About</h1>;
 };
 
 export default About;
