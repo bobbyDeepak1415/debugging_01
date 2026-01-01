@@ -2,9 +2,11 @@ import { useEffect } from "react";
 
 const About = () => {
   useEffect(() => {
-    setInterval(() => {
+    const timer = setInterval(() => {
       console.log("from about");
     }, 1200);
+
+    return () => clearInterval(timer);
   }, []);
 };
 
