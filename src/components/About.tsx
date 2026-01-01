@@ -2,13 +2,11 @@ import { useEffect } from "react";
 
 const About = () => {
   useEffect(() => {
-    
-    const handleClick=()=>console.log("clicked")
+    const handleClick = () => console.log("clicked");
 
-    window.addEventListener("click",handleClick)
+    window.addEventListener("click", handleClick);
 
-    
-
+    return () => window.removeEventListener("click", handleClick);
   }, []);
 
   return <h1>About</h1>;
