@@ -3,12 +3,8 @@ import { useEffect, useState } from "react";
 
 const About = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
-  const [input,setInput]=useState<string>("")
 
   useEffect(() => {
-
-
-    
     let isMounted = true;
 
     const fetchData = async () => {
@@ -32,6 +28,7 @@ const About = () => {
   return (
     <div>
       <h1>About</h1>
+      <h2>memory leaks</h2>
 
       <ul>
         {products.map((product) => {
