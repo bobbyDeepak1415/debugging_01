@@ -2,14 +2,15 @@ import { useEffect } from "react";
 
 const About = () => {
 
-  const runFunc=()=>{
-console.log("clicked")
+  const fetchData=()=>{
+
   }
 
-  const click=document.addEventListener("click",runFunc)
+  useEffect(() => {
+      
+    
+  }, []);
 
-  
-  
   return (
     <div>
       <h1>About</h1>
