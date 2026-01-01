@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 
 const About = () => {
+
+  const runFunc=()=>{
+console.log("clicked")
+  }
+
+  const click=document.addEventListener("click",runFunc)
+
+  
   
   return (
     <div>
