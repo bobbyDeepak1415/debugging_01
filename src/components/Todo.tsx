@@ -12,7 +12,10 @@ function Todo() {
     setItem("");
   };
 
-  const handleDelete = () => {
+  const handleDelete = (index:number) => {
+
+    set
+
   };
 
   return (
