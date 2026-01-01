@@ -7,9 +7,9 @@ export const Store = () => {
     <>
       <h1>Store</h1>
 
-      <button onClick={(prev)=>setIsLoggedIn(!prev)}>{isLoggedIn ? "Logout" :"Login"}</button>
-
-      
+      <button onClick={() => setIsLoggedIn((prev) => !prev)}>
+        {isLoggedIn ? "Logout" : "Login"}
+      </button>
     </>
   );
 };
