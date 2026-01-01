@@ -12,10 +12,8 @@ function Todo() {
     setItem("");
   };
 
-  const handleDelete = (index:number) => {
-
-    set
-
+  const handleDelete = (index: number) => {
+    setItems((prev) => prev.filter((apple, i) => i !== index));
   };
 
   return (
