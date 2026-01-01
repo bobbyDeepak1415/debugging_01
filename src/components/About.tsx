@@ -1,8 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const About = () => {
 
+  const [products,setProducts]=useState([])
+
   const fetchData=()=>{
+
+    const res = axios.get("https://api.escuelajs.co/api/v1/products");
+
 
   }
 
