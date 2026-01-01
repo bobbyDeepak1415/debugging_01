@@ -7,22 +7,30 @@ const About = () => {
   const fetchData = async () => {
     try {
       const res = await axios.get("https://api.escuelajs.co/api/v1/products");
-      setProducts(res.data);
+      const result = res.data;
+      setProducts(result);
+      console.log(result);
     } catch (e) {
       console.log("failed to fetch", e);
     }
   };
 
   useEffect(() => {
-    fetchData();
+    let isMounted = true;
+
+    if (isMounted) fetchData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
     <div>
       <h1>About</h1>
       <ul>
-        {products.map((product, id) => {
-          return <li key={id}>{product}</li>;
+        {products.map((product) => {
+          return <li key={product.id}>{product.title}</li>;
         })}
       </ul>
     </div>
