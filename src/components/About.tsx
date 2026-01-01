@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 
 const About = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
+  const [input,setInput]=useState<string>("")
 
   useEffect(() => {
+
+
+    
     let isMounted = true;
 
     const fetchData = async () => {
