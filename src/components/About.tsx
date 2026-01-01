@@ -22,7 +22,9 @@ const About = () => {
 
     fetchData();
 
-    return () => (isMounted = false);
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
