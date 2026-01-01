@@ -3,6 +3,7 @@ import About from "./components/About";
 // import Store from "./components/Store";
 import Home from "./components/Home";
 import React from "react";
+// import Todo from "./components/Todo";
 
 const Store = React.lazy(() =>
   import("./components/Store").then((module) => {
@@ -11,6 +12,13 @@ const Store = React.lazy(() =>
     };
   })
 );
+
+
+const Todo=React.lazy(()=>import('./components/Todo').then((module)=>{
+  return{
+    default:module.default
+  }
+}))
 
 console.log("from app");
 
@@ -24,6 +32,7 @@ function App() {
           <Route path="/" element={<Home item={item} />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/store" element={<Store />}></Route>
+          <Route path="/todo" element={<Todo />}></Route>
         </Route>
       </Routes>
     </>
@@ -40,6 +49,7 @@ function NavWrapper() {
         <Link to="/">Home</Link>
         <Link to="/store">Store</Link>
         <Link to="/about">About</Link>
+        <Link to="/todo">Todo</Link>
       </nav>
 
       <Outlet />
