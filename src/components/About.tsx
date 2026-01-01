@@ -2,11 +2,13 @@ import { useEffect } from "react";
 
 const About = () => {
   useEffect(() => {
-    const timer = setInterval(() => {
-      console.log("from about");
-    }, 1200);
+    
+    const handleClick=()=>console.log("clicked")
 
-    return () => clearInterval(timer);
+    window.addEventListener("click",handleClick)
+
+    
+
   }, []);
 
   return <h1>About</h1>;
