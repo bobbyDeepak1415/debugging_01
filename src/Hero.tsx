@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Hero() {
-  return (
-    <div>
-      
-    </div>
-  )
+function Hero({ heroName: string }) {
+  if (heroName === "Joker") {
+    throw new Error("not a hero");
+  }
+
+  return <div>{heroName}</div>;
 }
 
-export default Hero
+export default Hero;
