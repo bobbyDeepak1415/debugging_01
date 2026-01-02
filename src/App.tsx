@@ -3,6 +3,7 @@ import About from "./components/About";
 // import Store from "./components/Store";
 import Home from "./components/Home";
 import React from "react";
+import ErrorBoun from "./components/ErrorBoun";
 // import Todo from "./components/Todo";
 
 const Store = React.lazy(() =>
@@ -13,12 +14,13 @@ const Store = React.lazy(() =>
   })
 );
 
-
-const Todo=React.lazy(()=>import('./components/Todo').then((module)=>{
-  return{
-    default:module.default
-  }
-}))
+const Todo = React.lazy(() =>
+  import("./components/Todo").then((module) => {
+    return {
+      default: module.default,
+    };
+  })
+);
 
 console.log("from app");
 
@@ -33,12 +35,12 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/store" element={<Store />}></Route>
           <Route path="/todo" element={<Todo />}></Route>
+          <Route path="/errorBoun" element={<ErrorBoun />}></Route>
         </Route>
       </Routes>
     </>
   );
 }
-
 
 export default App;
 
@@ -50,6 +52,7 @@ function NavWrapper() {
         <Link to="/store">Store</Link>
         <Link to="/about">About</Link>
         <Link to="/todo">Todo</Link>
+        <Link to="/errorBoun">ErrorBoun</Link>
       </nav>
 
       <Outlet />
