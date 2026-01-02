@@ -1,6 +1,10 @@
 import React from "react";
 
-function Hero({ heroName }) {
+type HeroProps = {
+  heroName: string;
+};
+
+function Hero({ heroName }: HeroProps) {
   if (heroName === "Joker") {
     throw new Error("not a hero");
   }

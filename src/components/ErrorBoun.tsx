@@ -7,7 +7,7 @@ function ErrorBoun() {
       <h1>ErrorBoun</h1>
       <Hero heroName="Batman"/>
       <Hero heroName="Superman"/>
-      {/* <Hero heroName="Joker"/> */}
+      <Hero heroName="Joker"/>
 
       
     </div>
