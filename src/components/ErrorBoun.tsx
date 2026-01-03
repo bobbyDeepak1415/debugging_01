@@ -8,10 +8,8 @@ function ErrorBoun() {
       <h1>Error Boun</h1>
       <Hero heroName="Batman" />
       <Hero heroName="Superman" />
-      <ErrorBoundary>
 
       <Hero heroName="Joker" />
-      </ErrorBoundary>
     </div>
   );
 }
