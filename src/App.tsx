@@ -3,7 +3,14 @@ import About from "./components/About";
 // import Store from "./components/Store";
 import Home from "./components/Home";
 import React from "react";
-import Store from "./components/Store";
+// import Store from "./components/Store";
+
+// const Store = React.lazy(()=>import('./components/Store').then((module)=>{
+//   return {
+//     default:module.default
+//   }
+// }))
+
 
 
 const Todo = React.lazy(() =>
@@ -41,7 +48,7 @@ function NavWrapper() {
       <nav style={{ display: "flex", gap: "1rem", fontSize: "2rem" }}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to='/store'>Store</Link>
+        <Link to="/store">Store</Link>
         <Link to="/todo">Todo</Link>
         <Link to="/errorBoun">ErrorBoun</Link>
       </nav>
