@@ -1,9 +1,15 @@
 import React from "react";
 
 
-function Hero() {
+type HeroType={
+    heroName:string
+}
 
+function Hero({heroName}:HeroType) {
 
+if(heroName==="Joker"){
+    throw new Error()
+}
 
   return (
       <>
