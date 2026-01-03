@@ -10,25 +10,24 @@ function About() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    const controller = new AbortController();
-
     const fetchData = async () => {
-      try {
-        const res = await axios.get("https://dummyjson.com/products", {
-          signal: controller.signal,
-        });
 
-        setProducts(res.data.products);
-      } catch (err) {
-        console.log("failed to fetch", err);
+      const controller=new AbortController()
+
+      try{
+
+        const res = await fetch("https://dummyjson.com/products"{
+          signal:controller.signal
+        });
+        const response = await res.json();
+        setProducts(response.products);
+      }catch(e){
+        console.log("failed to fetch",e)
       }
     };
+    
 
     fetchData();
-
-    return () => {
-      controller.abort();
-    };
   }, []);
 
   return (
