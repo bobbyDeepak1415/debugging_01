@@ -1,32 +1,18 @@
-import React, { useEffect } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 function About() {
-  // useEffect(()=>{
-  //  const timer= setInterval(() => {
-  //     console.log("interval from about")
-  //   }, 1200);
 
-  //   return ()=>{
-  //     clearInterval(timer)
-  //   }
-
-  // })
-
-  // useEffect(() => {
-  //   const handleClick = () => {
-  //     console.log("clicked");
-  //   };
-
-  //   window.addEventListener("click", handleClick);
-
-  //   return () => {
-  //     window.removeEventListener("click", handleClick);
-  //   };
-  // });
-
+  const [products,setProducts]=useState([])
 
   useEffect(()=>{
-    
+
+    const fetchData=async()=>{
+      const res = await fetch("https://dummyjson.com/products");
+      const response=await res.json()
+      set
+    }
+
   })
 
   return (
