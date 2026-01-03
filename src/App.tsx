@@ -5,13 +5,14 @@ import Home from "./components/Home";
 import React from "react";
 // import Store from "./components/Store";
 
-// const Store = React.lazy(()=>import('./components/Store').then((module)=>{
-//   return {
-//     default:module.default
-//   }
-// }))
 
-
+const Store = React.lazy(() =>
+  import("./components/Store").then((module) => {
+    return {
+      default: module.Store,
+    };
+  })
+);
 
 const Todo = React.lazy(() =>
   import("./components/Todo").then((module) => {

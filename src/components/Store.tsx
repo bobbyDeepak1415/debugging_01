@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Store() {
+export function Store() {
   const [isLoddedIn, setIsLoggedIn] = useState(false);
 
   return (
@@ -17,4 +17,4 @@ function Store() {
   );
 }
 
-export default Store;
+
