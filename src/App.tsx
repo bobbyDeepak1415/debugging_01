@@ -3,8 +3,6 @@ import About from "./components/About";
 // import Store from "./components/Store";
 import Home from "./components/Home";
 import React from "react";
-// import Store from "./components/Store";
-
 
 const Store = React.lazy(() =>
   import("./components/Store").then((module) => {
@@ -41,6 +39,9 @@ function App() {
   );
 }
 
+
+
+
 export default App;
 
 function NavWrapper() {
@@ -51,7 +52,7 @@ function NavWrapper() {
         <Link to="/about">About</Link>
         <Link to="/store">Store</Link>
         <Link to="/todo">Todo</Link>
-        <Link to="/errorBoun">ErrorBoun</Link>
+        {/* <Link to="/errorBoun">ErrorBoun</Link> */}
       </nav>
 
       <Outlet />
