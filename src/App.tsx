@@ -3,6 +3,7 @@ import About from "./components/About";
 // import Store from "./components/Store";
 import Home from "./components/Home";
 import React from "react";
+import ErrorBoun from "./components/ErrorBoun";
 
 const Store = React.lazy(() =>
   import("./components/Store").then((module) => {
@@ -33,14 +34,12 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/store" element={<Store />}></Route>
           <Route path="/todo" element={<Todo />}></Route>
+          <Route path="/errorBoun" element={<ErrorBoun />}></Route>
         </Route>
       </Routes>
     </>
   );
 }
-
-
-
 
 export default App;
 
@@ -52,7 +51,7 @@ function NavWrapper() {
         <Link to="/about">About</Link>
         <Link to="/store">Store</Link>
         <Link to="/todo">Todo</Link>
-        {/* <Link to="/errorBoun">ErrorBoun</Link> */}
+        <Link to="/errorBoun">ErrorBoun</Link>
       </nav>
 
       <Outlet />

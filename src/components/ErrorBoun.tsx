@@ -1,13 +1,15 @@
-import React from 'react'
-import Hero from '../Hero'
+import React from "react";
+import Hero from "../Hero";
 
 function ErrorBoun() {
   return (
     <div>
       <h1>Error Boun</h1>
-      <Hero/>
+      <Hero heroName="Batman" />
+      <Hero heroName="Superman" />
+      <Hero heroName="Joker" />
     </div>
-  )
+  );
 }
 
-export default ErrorBoun
+export default ErrorBoun;

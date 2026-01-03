@@ -1,12 +1,15 @@
-import React from 'react'
+import React from "react";
+
 
 function Hero() {
+
+
+
   return (
-    <div>
-        <h2>Hero</h2>
-      
-    </div>
-  )
+      <>
+      <h1>{heroName}</h1>
+    </>
+  );
 }
 
-export default Hero
+export default Hero;
