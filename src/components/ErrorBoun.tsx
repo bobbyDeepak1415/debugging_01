@@ -9,7 +9,9 @@ function ErrorBoun() {
       <Hero heroName="Batman" />
       <Hero heroName="Superman" />
 
-      <Hero heroName="Joker" />
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary>
     </div>
   );
 }

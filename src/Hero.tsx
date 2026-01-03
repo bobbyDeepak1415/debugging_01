@@ -1,18 +1,16 @@
 import React from "react";
 
+type HeroType = {
+  heroName: string;
+};
 
-type HeroType={
-    heroName:string
-}
-
-function Hero({heroName}:HeroType) {
-
-if(heroName==="Joker"){
-    throw new Error()
-}
+function Hero({ heroName }: HeroType) {
+  if (heroName === "Joker") {
+    throw new Error("not a hero");
+  }
 
   return (
-      <>
+    <>
       <h1>{heroName}</h1>
     </>
   );
