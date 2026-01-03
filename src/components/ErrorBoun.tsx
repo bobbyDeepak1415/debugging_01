@@ -13,6 +13,6 @@ function ErrorBoun() {
       </ErrorBoundary>
     </div>
   );
-}
+}...
 
 export default ErrorBoun;
