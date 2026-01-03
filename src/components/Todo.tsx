@@ -20,7 +20,13 @@ function Todo() {
     <div>
       <h1>Todo</h1>
 
-      <input value={item} onChange={(e) => setItem(e.target.value)}></input>
+      <input
+        value={item}
+        onChange={(e) => {
+          if (item === null) return;
+          setItem(e.target.value);
+        }}
+      ></input>
       <button onClick={handleClick}>Add</button>
       <div>
         <ul>
