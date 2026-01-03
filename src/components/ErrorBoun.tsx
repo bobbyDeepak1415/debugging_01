@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../Hero";
+import ErrorBoundary from "../ErrorBoundary";
 
 function ErrorBoun() {
   return (
@@ -7,7 +8,10 @@ function ErrorBoun() {
       <h1>Error Boun</h1>
       <Hero heroName="Batman" />
       <Hero heroName="Superman" />
-      {/* <Hero heroName="Joker" /> */}
+      <ErrorBoundary>
+
+      <Hero heroName="Joker" />
+      </ErrorBoundary>
     </div>
   );
 }
