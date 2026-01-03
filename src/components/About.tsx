@@ -2,22 +2,23 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 function About() {
+  const [products, setProducts] = useState([]);
 
-  const [products,setProducts]=useState([])
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get("https://dummyjson.com/products");
+      setProducts(res.data.products);
+    };
 
-  useEffect(()=>{
-
-    const fetchData=async()=>{
-      const res = await fetch("https://dummyjson.com/products");
-      const response=await res.json()
-      set
-    }
-
-  })
+    fetchData();
+  }, []);
 
   return (
     <div>
       <h1>About</h1>
+      {products.map((product) => {
+        return <li key={product.id}>{product.title}</li>;
+      })}
     </div>
   );
 }
