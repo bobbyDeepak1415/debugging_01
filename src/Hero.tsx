@@ -6,7 +6,7 @@ type HeroType = {
 
 function Hero({ heroName }: HeroType) {
   if (heroName === "Joker") {
-    throw new Error("not a hero");
+    throw new Error();
   }
 
   return (
