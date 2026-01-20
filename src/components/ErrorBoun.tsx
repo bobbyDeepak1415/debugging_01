@@ -14,5 +14,5 @@ function ErrorBoun() {
     </div>
   );
 }
-....
+
 export default ErrorBoun;
